@@ -65,3 +65,13 @@ public class TableManyKey implements Serializable {
 	}
 
 }
+
+
+	@Bean
+	@Lazy
+	@StepScope
+	public JpaItemWriter<OutputTableItem> outputTableItemWriter() {
+		return new JpaItemWriterBuilder<OutputTableItem>()
+				.entityManagerFactory(entityManagerFactory)
+				.build();
+	}
