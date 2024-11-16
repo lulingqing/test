@@ -1,52 +1,67 @@
-package com.example.demo.jobstep.processor;
+package com.example.demo.bean;
 
-import org.springframework.batch.item.ItemProcessor;
+import java.io.Serializable;
 
-import com.example.demo.bean.IItemBean;
+public class TableManyKey implements Serializable {
 
-public abstract class AbstractItemProcessor<I extends IItemBean, O extends IItemBean> implements ItemProcessor<I, O> {
-
-	public AbstractItemProcessor() {
+	private static final long serialVersionUID = 1549743109103150741L;
+	
+	public TableManyKey() {
 		//Doing nothing
 	}
 	
+	public String getNewId() {
+		return newId;
+	}
+	public void setNewId(String newId) {
+		this.newId = newId;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	private String newId;
+	private String id;
+	
 	@Override
-	public O process(I item) throws Exception {
-		if(!item.isOutput()) return null;
-		return coreProcess(item);
+	public int hashCode() {
+		final int PRIME=31;
+		int result = 1;
+		result = PRIME * result + ((newId == null) ? 0 : newId.hashCode());
+		result = PRIME * result + ((id == null) ? 0 : id.hashCode());
+		return result;
 	}
 	
-	protected abstract O coreProcess(I item);
-
-}
-
-
-package com.example.demo.jobstep.processor;
-
-import com.example.demo.bean.InputCsvBean;
-import com.example.demo.bean.OutputFileItem;
-
-public class CsvFileItemProcessor extends AbstractItemProcessor<InputCsvBean, OutputFileItem>{
-
 	@Override
-	protected OutputFileItem coreProcess(InputCsvBean item) {
+	public boolean equals(Object obj) {
+		if(this == obj) 
+			return true;
+		if(obj == null) 
+			return false;
+		if(getClass() != obj.getClass()) 
+			return false;
 		
-		OutputFileItem outItem = new OutputFileItem();
-		outItem.setId(item.getId());
-		outItem.setName(item.getName());
-		outItem.setAddress(item.getAddress());
-		outItem.setTelephone(item.getTelephone());
-		outItem.setChinese(null);
-		outItem.setMath(null);
-		outItem.setEnglish(null);
+		final TableManyKey other = (TableManyKey) obj;
 		
-		return outItem;
+		if(newId == null) {
+			if(other.newId != null)
+				return false;
+		} else if(!newId.equals(other.newId))
+			return false;
+		
+		if(id == null) {
+			if(other.id != null)
+				return false;
+		} else if(!id.equals(other.id))
+			return false;
+		
+		return true;
+			
 	}
 
 }
-	@Bean
-	public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-		JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
-		jpaTransactionManager.setEntityManagerFactory(null);
-		return jpaTransactionManager;
-	}
