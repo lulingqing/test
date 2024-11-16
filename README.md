@@ -1,3 +1,39 @@
+package com.example.demo.bean;
+
+public interface IItemBean {
+	boolean isOutput();
+}
+
+package com.example.demo.bean;
+
+public class AbstractItemBean implements IItemBean {
+
+	private boolean isOutput = true;
+	
+	public AbstractItemBean( ) {
+		//Doing nothing
+	}
+	
+	@Override
+	public boolean isOutput() {
+		return isOutput;
+	}
+
+	public void setOutput(boolean isOutput) {
+		this.isOutput = isOutput;
+	}
+	
+	protected String normalizeValue(String value) {
+		if(value == null || value.isEmpty()) {
+			return null;
+		}
+		return value;
+	}
+}
+
+
+
+
 package com.example.demo.config;
 
 import java.io.File;
