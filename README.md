@@ -1,19 +1,15 @@
 package com.example.demo.log.dao;
 
 import org.springframework.batch.core.JobExecution;
-import org.springframework.batch.core.StepExecution;
-import org.springframework.batch.core.repository.dao.MapExecutionContextDao;
+import org.springframework.batch.core.repository.dao.MapJobExecutionDao;
 
-public class FileExecutionContextDao extends MapExecutionContextDao{
-
-	public void updateExecutionContext(StepExecution stepExecution) {
-		super.updateExecutionContext(stepExecution);
-		FileDaoLoggerSingleton.getInstance().logInfo(stepExecution);
+public class FileJobExecutionDao extends MapJobExecutionDao {
+	
+	public void saveJobExecution(JobExecution jobExecution) {
+		super.saveJobExecution(jobExecution);
 	}
 	
-	public void updateExecutionContext(JobExecution jobExecution) {
-		super.updateExecutionContext(jobExecution);
-		FileDaoLoggerSingleton.getInstance().logInfo(jobExecution);
+	public void updateJobExecution(JobExecution jobExecution) {
+		super.updateJobExecution(jobExecution);
 	}
-	
 }
