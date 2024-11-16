@@ -44,3 +44,9 @@ public class CsvFileItemProcessor extends AbstractItemProcessor<InputCsvBean, Ou
 	}
 
 }
+	@Bean
+	public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+		JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
+		jpaTransactionManager.setEntityManagerFactory(null);
+		return jpaTransactionManager;
+	}
