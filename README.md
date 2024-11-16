@@ -1,11 +1,6 @@
-	@Bean
-	@Lazy
-	@StepScope
-	public CsvFileItemProcessor csvFileItemProcessor() {
-		logger.info("csvFileItemProcessor start");
-		
-		return new CsvFileItemProcessor();
+	@Override
+	protected JobExplorer createJobExplorer() throws Exception {
+		FileJobExplorerFactoryBean jobExplorerFactory = new FileJobExplorerFactoryBean(jobRepositoryFactory);
+		jobExplorerFactory.afterPropertiesSet();
+		return jobExplorerFactory.getObject();
 	}
-
-
- 
