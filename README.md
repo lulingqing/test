@@ -1,60 +1,23 @@
-org.springframework.boot\spring-boot-configuration-processor\2.3.4.RELEASE\b0ff01c3e647564fe2bd6ad470832fc700464e63\spring-boot-configuration-processor-2.3.4.RELEASE.jar
-org.springframework.boot\spring-boot-starter-batch\2.3.4.RELEASE\32929398f1dbeffdcca437e9bfc5c5be5b663193\spring-boot-starter-batch-2.3.4.RELEASE.jar
-org.springframework.boot\spring-boot-starter-data-jpa\2.3.4.RELEASE\a8b9828649248d762d1d3fc6898c8d7e471e1a8e\spring-boot-starter-data-jpa-2.3.4.RELEASE.jar
-org.springframework.boot\spring-boot-starter-jdbc\2.3.4.RELEASE\77ca3fe49c6f9bb62fec474ebfc0c529bf048fd4\spring-boot-starter-jdbc-2.3.4.RELEASE.jar
-org.springframework.boot\spring-boot-starter-mail\2.3.4.RELEASE\f64c8dab2275899ff139f57ffa5cbe5f1353965d\spring-boot-starter-mail-2.3.4.RELEASE.jar
-org.springframework.boot\spring-boot-starter-aop\2.7.18\8669fae56877e44bd26e35f641e0233bebe9239c\spring-boot-starter-aop-2.7.18.jar
-org.springframework.boot\spring-boot-starter\2.3.4.RELEASE\cfeb7cce94a342b4b31b64c42a82c287c2f17207\spring-boot-starter-2.3.4.RELEASE.jar
-org.springframework.boot\spring-boot-starter-logging\2.3.4.RELEASE\677a66ac80e88cefaaca64e72b5523eb4836b7ae\spring-boot-starter-logging-2.3.4.RELEASE.jar
-com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar
-org.springframework.batch\spring-batch-core\4.2.4.RELEASE\360e85c3bd47d96318536372a7bb96d98af3b889\spring-batch-core-4.2.4.RELEASE.jar
-org.springframework.batch\spring-batch-infrastructure\4.2.4.RELEASE\2e6ed826b52109effeba499b8361f86728a603f5\spring-batch-infrastructure-4.2.4.RELEASE.jar
-org.springframework.boot\spring-boot-autoconfigure\2.3.4.RELEASE\ff9efafb9d62c17d8c3c1faec7afad147c924263\spring-boot-autoconfigure-2.3.4.RELEASE.jar
-org.springframework.boot\spring-boot\2.3.4.RELEASE\f23f14ae4062d5983db89b7c7336166b6734fc57\spring-boot-2.3.4.RELEASE.jar
-jakarta.persistence\jakarta.persistence-api\2.2.3\8f6ea5daedc614f07a3654a455660145286f024e\jakarta.persistence-api-2.2.3.jar
-jakarta.annotation\jakarta.annotation-api\1.3.5\59eb84ee0d616332ff44aba065f3888cf002cd2d\jakarta.annotation-api-1.3.5.jar
-org.springframework.data\spring-data-jpa\2.7.18\ad78adb26ea2e4f11589aa73c7b3eb473a16078c\spring-data-jpa-2.7.18.jar
-org.springframework\spring-orm\5.3.31\cb9b7ac171e680e3eaa2fb69e90a8595f8aa201b\spring-orm-5.3.31.jar
-org.springframework\spring-jdbc\5.3.31\9124850a2e396a33e5dbd5d1e891e105dac48633\spring-jdbc-5.3.31.jar
-org.springframework\spring-context-support\5.3.31\1dce4c0f8a8382a9107ce6a47e603f4a3efa3301\spring-context-support-5.3.31.jar
-org.springframework\spring-context\5.3.31\a2d6e76507f037ad835e8c2288dfedf28981999f\spring-context-5.3.31.jar
-org.springframework\spring-aop\5.3.31\3be929dbdb5f4516919ad09a3d3720d779bb65d9\spring-aop-5.3.31.jar
-org.springframework\spring-tx\5.3.31\143e79385354fc7ffd9773a31ba989931ad9e920\spring-tx-5.3.31.jar
-org.springframework.data\spring-data-commons\2.7.18\e7cc3f9746e9439f3e33355b4d4ef262e5b136d1\spring-data-commons-2.7.18.jar
-org.springframework\spring-beans\5.3.31\d27258849071b3b268ecc388eca35bbfcc586448\spring-beans-5.3.31.jar
-org.springframework\spring-expression\5.3.31\55637af1b186d1008890980c2876c5fc83599756\spring-expression-5.3.31.jar
-org.springframework\spring-core\5.3.31\368e76f732a3c331b970f69cafec1525d27b34d3\spring-core-5.3.31.jar
-org.yaml\snakeyaml\1.30\8fde7fe2586328ac3c68db92045e1c8759125000\snakeyaml-1.30.jar
-com.zaxxer\HikariCP\4.0.3\107cbdf0db6780a065f895ae9d8fbf3bb0e1c21f\HikariCP-4.0.3.jar
-jakarta.transaction\jakarta.transaction-api\1.3.3\c4179d48720a1e87202115fbed6089bdc4195405\jakarta.transaction-api-1.3.3.jar
-org.hibernate\hibernate-core\5.6.15.Final\ab14b7cef1fdff654ca81923048a6034d6c7cfa7\hibernate-core-5.6.15.Final.jar
-org.springframework\spring-aspects\5.3.31\9bd8e781e08e1b02a78e867913b96bccd2bc5798\spring-aspects-5.3.31.jar
-com.sun.mail\jakarta.mail\1.6.7\319df0e9d536c1a01acdfe49b6e82b97d2393073\jakarta.mail-1.6.7.jar
-ch.qos.logback\logback-classic\1.2.12\d4dee19148dccb177a0736eb2027bd195341da78\logback-classic-1.2.12.jar
-org.apache.logging.log4j\log4j-to-slf4j\2.17.2\17dd0fae2747d9a28c67bc9534108823d2376b46\log4j-to-slf4j-2.17.2.jar
-org.slf4j\jul-to-slf4j\1.7.36\ed46d81cef9c412a88caef405b58f93a678ff2ca\jul-to-slf4j-1.7.36.jar
-com.fasterxml.jackson.core\jackson-annotations\2.13.5\136f77ab424f302c9e27230b4482e8000e142edf\jackson-annotations-2.13.5.jar
-com.fasterxml.jackson.core\jackson-core\2.13.5\d07c97d3de9ea658caf1ff1809fd9de930a286a\jackson-core-2.13.5.jar
-com.fasterxml.jackson.core\jackson-databind\2.13.5\aa95e46dbc32454f3983221d420e78ef19ddf844\jackson-databind-2.13.5.jar
-io.micrometer\micrometer-core\1.9.17\48bf67c0c7028e5f3124d1f9a31bdcf345596e65\micrometer-core-1.9.17.jar
-javax.batch\javax.batch-api\1.0\65392d027a6eb369fd9fcd1b75cae150e25ac03c\javax.batch-api-1.0.jar
-org.codehaus.jettison\jettison\1.2\765a6181653f4b05c18c7a9e8f5c1f8269bf9b2\jettison-1.2.jar
-org.springframework.retry\spring-retry\1.3.4\4262d75536b193ea70bd3e854155462623d180a5\spring-retry-1.3.4.jar
-org.springframework\spring-jcl\5.3.31\e7ab9ee590a195415dd6b898440d776b4c8db78c\spring-jcl-5.3.31.jar
-org.slf4j\slf4j-api\1.7.36\6c62681a2f655b49963a5983b8b0950a6120ae14\slf4j-api-1.7.36.jar
-org.aspectj\aspectjweaver\1.9.7\158f5c255cd3e4408e795b79f7c3fbae9b53b7ca\aspectjweaver-1.9.7.jar
-org.hibernate.common\hibernate-commons-annotations\5.1.2.Final\e59ffdbc6ad09eeb33507b39ffcf287679a498c8\hibernate-commons-annotations-5.1.2.Final.jar
-org.jboss.logging\jboss-logging\3.4.3.Final\c4bd7e12a745c0e7f6cf98c45cdcdf482fd827ea\jboss-logging-3.4.3.Final.jar
-net.bytebuddy\byte-buddy\1.12.23\d470526e8c4566c04e9ae5d3ccb62d1a7aa58986\byte-buddy-1.12.23.jar
-antlr\antlr\2.7.7\83cd2cd674a217ade95a4bb83a8a14f351f48bd0\antlr-2.7.7.jar
-org.jboss\jandex\2.4.2.Final\1e1c385990b258ff1a24c801e84aebbacf70eb39\jandex-2.4.2.Final.jar
-com.fasterxml\classmate\1.5.1\3fe0bed568c62df5e89f4f174c101eab25345b6c\classmate-1.5.1.jar
-org.glassfish.jaxb\jaxb-runtime\2.3.9\9d42b4f19df7e20b625b2044a7de81d95f6dff29\jaxb-runtime-2.3.9.jar
-com.sun.activation\jakarta.activation\1.2.2\74548703f9851017ce2f556066659438019e7eb5\jakarta.activation-1.2.2.jar
-ch.qos.logback\logback-core\1.2.12\1d8e51a698b138065d73baefb4f94531faa323cb\logback-core-1.2.12.jar
-org.apache.logging.log4j\log4j-api\2.17.2\f42d6afa111b4dec5d2aea0fe2197240749a4ea6\log4j-api-2.17.2.jar
-org.hdrhistogram\HdrHistogram\2.1.12\6eb7552156e0d517ae80cc2247be1427c8d90452\HdrHistogram-2.1.12.jar
-jakarta.xml.bind\jakarta.xml.bind-api\2.3.3\48e3b9cfc10752fba3521d6511f4165bea951801\jakarta.xml.bind-api-2.3.3.jar
-org.glassfish.jaxb\txw2\2.3.9\13a78453a89bf7d268382a520cba4d5435c5adfc\txw2-2.3.9.jar
-com.sun.istack\istack-commons-runtime\3.0.12\cbbe1a62b0cc6c85972e99d52aaee350153dc530\istack-commons-runtime-3.0.12.jar
-org.latencyutils\LatencyUtils\2.0.3\769c0b82cb2421c8256300e907298a9410a2a3d3\LatencyUtils-2.0.3.jar
+package com.example.demo.jobstep.mapper;
+
+import org.springframework.batch.item.file.mapping.FieldSetMapper;
+import org.springframework.batch.item.file.transform.FieldSet;
+import org.springframework.validation.BindException;
+import com.example.demo.bean.InputCsvBean;
+
+public class CsvFileMapper implements FieldSetMapper<InputCsvBean> {
+
+	@Override
+	public InputCsvBean mapFieldSet(FieldSet fieldSet) throws BindException {
+		
+		InputCsvBean itemBean = new InputCsvBean();
+		
+		itemBean.setId(fieldSet.readString(InputCsvBean.ConstantValueList.ID));
+		itemBean.setName(fieldSet.readString(InputCsvBean.ConstantValueList.NAME));
+		itemBean.setAddress(fieldSet.readString(InputCsvBean.ConstantValueList.ADDRESS));
+		itemBean.setTelephone(fieldSet.readString(InputCsvBean.ConstantValueList.TELEPHONE));
+		
+		return itemBean;
+	}
+
+}
