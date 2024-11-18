@@ -1,26 +1,66 @@
-#以下はSybaseの接続子で保存する
-#server.port=8080
-#spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-#spring.jpa.databasePlatform=org.hibernate.dialect.SybaseAnywhereDialect
-#
-#JPA Configuration
-#spring.jpa.hibernate.ddl-auto=none
-#spring.jpa.database=SYBASE
-#spring.jpa.show-sql=false
-#spring.jpa.properties.hibernate.jdbc.batch_size=10000
-#
-#jdbc definition 2 db
-#spring.datasource.primary.driver-class-name=com.sybase.jdbc4.jdbc.SybDriver
-#spring.datasource.primary.url=jdbc:sybase:Tds:sybase-cstk-rhel7-prd.nomura.com:9812/etp_db
-#spring.datasource.primary.username=xxxxxx
-#spring.datasource.primary.password=xxxxxx
-#spring.datasource.secondary.driver-class-name=com.sybase.jdbc4.jdbc.SybDriver
-#spring.datasource.secondary.url=jdbc:sybase:Tds:sybase-cstk-rhel7-prd.nomura.com:9812/ACCTS_PRD
-#spring.datasource.secondary.username=xxxxxx
-#spring.datasource.secondary.password=xxxxxx
-#
-#jdbc definition 1 db
-#spring.datasource.driverClassName=com.sybase.jdbc4.jdbc.SybDriver
-#spring.datasource.url=jdbc:sybase:Tds:sybase-cstk-rhel7-prd.nomura.com:9812/etp_db
-#spring.datasource.username=xxxxxx
-#spring.datasource.password=xxxxxx
+	@Bean
+	@Lazy
+	@StepScope
+	public JdbcCursorItemReader<OutputTableItem> outputJdbcCursorItemReader(DataSource datasource, String businessDate) {
+		StringBuilder sqlString = new StringBuilder();
+		
+		sqlString.append("Select * FROM MY_BATCH_TABLE ");
+		sqlString.append("WHERE getDate() < '");
+		sqlString.append(businessDate);
+		sqlString.append("'");
+		
+		return new JdbcCursorItemReaderBuilder<OutputTableItem>()
+				.dataSource(datasource)
+				.name("outputJdbcCursorItemReader")
+				.sql(sqlString.toString())
+				.rowMapper(new OutputTableMapper())
+				.build();
+	}
+	
+	@Bean
+	@Lazy
+	@StepScope
+	public OutputFileMapWriter outputFileMapWriter() {
+		OutputFileMapWriter writer = new OutputFileMapWriter();
+		writer.setDelete(false);
+		writer.setItemKeyMapper(new OutputFileMapConverter());
+		writer.setOutputFileMap(globalBean.getOutputFileMap());
+		
+		return writer;
+	}
+
+ package com.example.demo.jobstep.writer;
+
+import java.util.Map;
+
+import org.springframework.batch.item.KeyValueItemWriter;
+import org.springframework.util.Assert;
+
+import com.example.demo.bean.OutputFileItem;
+
+import jakarta.annotation.PostConstruct;
+
+public class OutputFileMapWriter extends KeyValueItemWriter<String, OutputFileItem> {
+
+	public Map<String, OutputFileItem> outputFileMap;
+	
+	public void setOutputFileMap(Map<String, OutputFileItem> outputFileMap) {
+		this.outputFileMap = outputFileMap;
+	}
+	
+	@Override
+	protected void writeKeyValue(String key, OutputFileItem value) {
+		if(delete) {
+			outputFileMap.remove(key);
+		} else {
+			outputFileMap.put(key, value);
+		}
+	}
+
+	@Override
+	@PostConstruct
+	protected void init() {
+		Assert.notNull(outputFileMap, "A outputFileMap is required.");
+	}
+
+}
