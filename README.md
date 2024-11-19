@@ -1,35 +1,4 @@
-	@Bean
-	@Lazy
-	@StepScope
-	public JdbcCursorItemReader<OutputTableItem> outputJdbcCursorItemReader(DataSource datasource, String businessDate) {
-		StringBuilder sqlString = new StringBuilder();
-		
-		sqlString.append("Select * FROM MY_BATCH_TABLE ");
-		sqlString.append("WHERE getDate() < '");
-		sqlString.append(businessDate);
-		sqlString.append("'");
-		
-		return new JdbcCursorItemReaderBuilder<OutputTableItem>()
-				.dataSource(datasource)
-				.name("outputJdbcCursorItemReader")
-				.sql(sqlString.toString())
-				.rowMapper(new OutputTableMapper())
-				.build();
-	}
-	
-	@Bean
-	@Lazy
-	@StepScope
-	public OutputFileMapWriter outputFileMapWriter() {
-		OutputFileMapWriter writer = new OutputFileMapWriter();
-		writer.setDelete(false);
-		writer.setItemKeyMapper(new OutputFileMapConverter());
-		writer.setOutputFileMap(globalBean.getOutputFileMap());
-		
-		return writer;
-	}
-
- package com.example.demo.jobstep.writer;
+package com.example.demo.jobstep.writer;
 
 import java.util.Map;
 
